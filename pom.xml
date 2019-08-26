@@ -58,7 +58,6 @@
             <artifactId>mybatis-redis</artifactId>
             <version>1.0.0-beta2</version>
         </dependency>
-
 <!--        mybatis 代码生成器-->
         <dependency>
             <groupId>org.mybatis.generator</groupId>

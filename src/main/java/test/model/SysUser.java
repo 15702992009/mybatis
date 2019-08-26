@@ -10,6 +10,20 @@ import java.util.Date;
  * @mbggenerated do_not_delete_during_merge
  */
 public class SysUser {
+
+    /**
+     *  add new sysRole property
+     *  用户角色
+     */
+    private SysRole role;
+
+    public SysRole getRole() {
+        return role;
+    }
+
+    public void setRole(SysRole role) {
+        this.role = role;
+    }
     /**
      * Database Column Remarks:
      *   用户ID

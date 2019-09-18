@@ -8,11 +8,16 @@
         <setting name="logImpl" value="LOG4J"/>
 <!--        将mysql中的下划线转换为java 的驼峰命名 用于借口配置类中sql语句的书写可以省略 别名自动将mysql数据库列名转换成驼峰命名-->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
+<!--        开启延迟加载-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+<!--        打开延迟加载-->
+        <setting name="aggressiveLazyLoading" value="false"/>
     </settings>
 
     <typeAliases>
         <package name="tk.mybatis.simple.model"/>
     </typeAliases>
+
 
     <environments default="development">
 

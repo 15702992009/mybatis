@@ -26,4 +26,7 @@ public interface RoleMapper {
     @Insert({"insert into sys_role(role_name,enabled,create_by,create_time) values(#{roleName}, #{enabled}, #{createBy}, #{createTime,jdbcType=TIMESTAMP})"})
     @Options(useGeneratedKeys = true,  keyColumn ="id," )
     int insert2(SysRole sysRole);
+    SysRole selectRoleById(Long id);
+    SysRole selectRoleByUserId(Long userId);
+
 }

@@ -1,14 +1,43 @@
 package tk.mybatis.simple.model;
 
 import java.util.Date;
+import java.util.List;
 
 public class SysRole {
     private Long id;
     private String roleName;
     private int enabled;
-    private Long createBy;
-    private Date createTime;
     private SysUser user;
+    private List<SysPrivilege> privilegeList;
+    private CreateInfo createInfo;
+
+    public CreateInfo getCreateInfo() {
+        return createInfo;
+    }
+
+    public void setCreateInfo(CreateInfo createInfo) {
+        this.createInfo = createInfo;
+    }
+
+    public List<SysPrivilege> getPrivilegeList() {
+        return privilegeList;
+    }
+
+    public void setPrivilegeList(List<SysPrivilege> privilegeList) {
+        this.privilegeList = privilegeList;
+    }
+
+    @Override
+    public String toString() {
+        return "SysRole{" +
+                "id=" + id +
+                ", roleName='" + roleName + '\'' +
+                ", enabled=" + enabled +
+                ", user=" + user +
+                ", privilegeList=" + privilegeList +
+                ", createInfo=" + createInfo +
+                '}';
+    }
 
     public SysUser getUser() {
         return user;
@@ -42,19 +71,4 @@ public class SysRole {
         this.enabled = enabled;
     }
 
-    public Long getCreateBy() {
-        return createBy;
-    }
-
-    public void setCreateBy(Long createBy) {
-        this.createBy = createBy;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
 }

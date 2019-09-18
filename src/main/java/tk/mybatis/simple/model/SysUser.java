@@ -1,7 +1,9 @@
 package tk.mybatis.simple.model;
 
 
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 public class SysUser {
     private Long id;
@@ -12,9 +14,32 @@ public class SysUser {
     private byte[] headImg;
     private Date createTime;
     private SysRole role;
+    private List<SysRole> roleList;
+
+    public List<SysRole> getRoleList() {
+        return roleList;
+    }
+
+    public void setRoleList(List<SysRole> roleList) {
+        this.roleList = roleList;
+    }
 
     public SysRole getRole() {
         return role;
+    }
+
+    @Override
+    public String toString() {
+        return "SysUser{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", userPassword='" + userPassword + '\'' +
+                ", userEmail='" + userEmail + '\'' +
+                ", userInfo='" + userInfo + '\'' +
+                ", headImg=" + Arrays.toString(headImg) +
+                ", createTime=" + createTime +
+                ", role=" + role +
+                '}';
     }
 
     public void setRole(SysRole role) {

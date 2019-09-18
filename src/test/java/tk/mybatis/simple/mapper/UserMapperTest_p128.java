@@ -5,7 +5,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import tk.mybatis.simple.model.SysUser;
 
-import java.util.List;
 
 public class UserMapperTest_p128 extends  BaseMapperTest{
     @Test
@@ -15,7 +14,8 @@ public class UserMapperTest_p128 extends  BaseMapperTest{
         try{
             //获取UseMapper接口
             UserMapper userMapper=sqlSession.getMapper(UserMapper.class);
-            SysUser user= userMapper.selectUserAndRoleById(1001L);
+            SysUser user= userMapper.selectUserAndRoleById2(1001L);
+        //    System.out.println(user);
             Assert.assertNotNull(user);
             Assert.assertNotNull(user.getRole());
         }finally {
